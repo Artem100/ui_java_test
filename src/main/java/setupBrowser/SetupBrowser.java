@@ -11,7 +11,7 @@ public class  SetupBrowser {
     public static String cookie_value;
 
     public static void start_browser(){
-//        Configuration.remote = "http://localhost:4440/wd/hub";
+        Configuration.remote = "http://localhost:4440/wd/hub";
         Configuration.browser = "chrome";
         Configuration.timeout = 5000;
         Configuration.browserSize = "1920x1080";
