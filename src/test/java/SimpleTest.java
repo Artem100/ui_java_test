@@ -19,7 +19,7 @@ public class SimpleTest {
 
     @Test
     public void test_01(){
-        mainPage.textFieldInput("lalal");
+        mainPage.textFieldInput("lalalalllllllllsdkkkkkkkalsdddd");
         mainPage.submitButtonClick();
     }
 
