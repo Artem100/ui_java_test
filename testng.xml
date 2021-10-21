@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestSuite" configfailurepolicy="continue">
+    <test name="Test">
+        <classes>
+            <!--class name="LoginTest"/>
+            <class name="InvestorsTest"/>
+            <class name="FundsTest"/>
+            <class name="UndertakingCategoriesTest"/>-->
+            <class name="SimpleTest"/>
+        </classes>
+    </test>
+</suite>
