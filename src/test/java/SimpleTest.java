@@ -1,3 +1,4 @@
+import dataTest.DataTest;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -19,7 +20,13 @@ public class SimpleTest {
 
     @Test
     public void test_01(){
-        mainPage.textFieldInput("lalalalllllllllsdkkkkkkkalsdddd");
+        mainPage.textFieldInput(DataTest.search1());
+        mainPage.submitButtonClick();
+    }
+
+    @Test
+    public void test_02(){
+        mainPage.textFieldInput(DataTest.search1());
         mainPage.submitButtonClick();
     }
 

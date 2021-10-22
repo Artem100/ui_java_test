@@ -2,11 +2,8 @@
 
 <suite name="TestSuite" configfailurepolicy="continue">
     <test name="Test">
+        <parameter name="browser" value="remote"/>
         <classes>
-            <!--class name="LoginTest"/>
-            <class name="InvestorsTest"/>
-            <class name="FundsTest"/>
-            <class name="UndertakingCategoriesTest"/>-->
             <class name="SimpleTest"/>
         </classes>
     </test>
