@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  selenium:
+    image: selenium/standalone-chrome:3.141.59
+    container_name: selenium_server_works
+    ports:
+      - "4440:4444"
+    logging:
+      driver: local
+
+  test_runner:
+    build:
+      context: .
+      dockerfile: .
+    image: tests_run
+    container_name: tests_works
+    network_mode: "host"

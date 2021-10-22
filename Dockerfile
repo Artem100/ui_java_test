@@ -1,7 +1,7 @@
- FROM maven:3.8-ibmjava-8
+FROM maven:3.8-ibmjava-8
 
- WORKDIR /app
+WORKDIR /app
 
- COPY . .
+COPY . .
 
- CMD mvn test
+CMD mvn test
