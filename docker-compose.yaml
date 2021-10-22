@@ -11,7 +11,6 @@ services:
 
   test_runner:
     build:
-      context: .
       dockerfile: .
     image: tests_run
     container_name: tests_works
