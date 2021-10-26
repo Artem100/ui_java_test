@@ -3,6 +3,8 @@ package setupBrowser;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
+
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Parameters;
 
@@ -12,12 +14,15 @@ public class  SetupBrowser {
 
     public void start_browser(String browser) {
         if (browser.equals("remote")) {
-            Configuration.browser = "chrome";
             Configuration.remote = "http://localhost:4444/";
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+            capabilities.setBrowserName("chrome");
+            capabilities.setVersion("86.0");
             Configuration.timeout = 5000;
             Configuration.clickViaJs = true;
             Configuration.startMaximized = true;
-            Configuration.headless = false;
+//            Configuration.headless = false;
+            Configuration.browserCapabilities = capabilities;
             SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true).
                     includeSelenideSteps(false));
 
