@@ -33,7 +33,7 @@ public class  SetupBrowser {
 //        SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true).
 //                includeSelenideSteps(false));
         Configuration.browser = "chrome";
-//        Configuration.remote = "http://localhost:4440/wd/hub";
+        Configuration.remote = "http://localhost:4440/wd/hub";
         Configuration.timeout = 30000;
         Configuration.clickViaJs = true;
         Configuration.startMaximized = true;
