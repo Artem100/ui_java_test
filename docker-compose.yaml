@@ -8,7 +8,7 @@ services:
       - "4440:4444"
     volumes:
       - "$PWD/selenoid:/etc/selenoid"
-    command: ["-conf", "/etc/selenoid/browser.json"]
+    command: ["-conf", "/etc/selenoid/browsers.json"]
 
   test_runner:
     build:
