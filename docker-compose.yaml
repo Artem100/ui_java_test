@@ -7,7 +7,7 @@ services:
     ports:
       - "4440:4444"
     volumes:
-      - "$PWD/selenoid:/etc/selenoid"
+      - "./selenoid:/etc/selenoid"
     command: ["-conf", "/etc/selenoid/browsers.json"]
 
   test_runner:
