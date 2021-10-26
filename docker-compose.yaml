@@ -2,7 +2,7 @@ version: "3.2"
 
 services:
   selenoid:
-    network_mode: bridge
+    network_mode: "bridge"
     image: aerokube/selenoid:latest-release
     ports:
       - "4444:4444"
