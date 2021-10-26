@@ -5,7 +5,7 @@ services:
     network_mode: "host"
     image: aerokube/selenoid:latest-release
     ports:
-      - "4440:4444"
+      - "4444:4444"
     volumes:
       - "./selenoid:/etc/selenoid"
     command: ["-conf", "/etc/selenoid/browsers.json"]
@@ -19,5 +19,5 @@ services:
     network_mode: "host"
     volumes:
       - type: bind
-        source: /tmp/bind
+        source: /home/bind
         target: /bind
