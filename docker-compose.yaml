@@ -1,9 +1,9 @@
 version: "3"
 
 services:
-  selenium:
-    image: selenium/standalone-chrome:3.141.59
-    container_name: selenium_server_works
+  selenoid:
+    network_mode: bridge
+    image: aerokube/selenoid:latest-release
     ports:
       - "4440:4444"
     logging:
