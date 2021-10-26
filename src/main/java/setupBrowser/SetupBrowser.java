@@ -17,7 +17,7 @@ public class  SetupBrowser {
 //    }
 
 //    @Parameters("browser")
-    public static void start_browser(){
+    public void start_browser(){
 //        if (getBrowser() = "Remote"){
 //            Configuration.remote = "http://localhost:4440/wd/hub";
 //            }
@@ -25,17 +25,19 @@ public class  SetupBrowser {
 //            Configuration.browser = "chrome";
 //            }
 //        Configuration.remote = "http://selenium:4444/wd/hub";
+        // Local run
+//        Configuration.browser = "chrome";
+//        Configuration.timeout = 5000;
+//        Configuration.browserSize = "1920x1080";
+//        Configuration.headless = false;
+//        SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true).
+//                includeSelenideSteps(false));
         Configuration.browser = "chrome";
-        Configuration.timeout = 5000;
-        Configuration.browserSize = "1920x1080";
+//        Configuration.remote = "http://localhost:4444/wd/hub";
+        Configuration.timeout = 30000;
+        Configuration.clickViaJs = true;
+        Configuration.startMaximized = true;
         Configuration.headless = false;
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true).
-                includeSelenideSteps(false));
-
-    }
-
-    public static void close_browser(){
-        closeWebDriver();
     }
 
 }
