@@ -6,8 +6,9 @@ services:
     image: aerokube/selenoid:latest-release
     ports:
       - "4440:4444"
-    logging:
-      driver: local
+    volumes:
+      - "$PWD/selenoid:/etc/selenoid"
+    command: ["-conf", "/etc/selenoid/browser.json"]
 
   test_runner:
     build:
