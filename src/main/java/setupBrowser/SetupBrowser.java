@@ -13,7 +13,7 @@ public class  SetupBrowser {
     public void start_browser(String browser) {
         if (browser.equals("remote")) {
             Configuration.browser = "chrome";
-            Configuration.remote = "http://localhost:4440/wd/hub";
+            Configuration.remote = "http://localhost:4444/wd/hub";
             Configuration.timeout = 5000;
             Configuration.clickViaJs = true;
             Configuration.startMaximized = true;
