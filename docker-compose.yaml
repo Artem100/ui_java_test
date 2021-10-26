@@ -2,7 +2,7 @@ version: "3"
 
 services:
   selenoid:
-    network_mode: bridge
+    network_mode: "host"
     image: aerokube/selenoid:latest-release
     ports:
       - "4440:4444"
@@ -16,3 +16,7 @@ services:
     image: tests_run
     container_name: tests_works
     network_mode: "host"
+    volumes:
+      - type: bind
+        source: /tmp/bind
+        target: /bind

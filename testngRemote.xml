@@ -2,7 +2,7 @@
 
 <suite name="TestSuite" configfailurepolicy="continue">
     <test name="Test">
-        <parameter name="browser" value="local"/>
+        <parameter name="browser" value="remote"/>
         <classes>
             <class name="SimpleTest"/>
         </classes>
