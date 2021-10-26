@@ -14,7 +14,7 @@ public class  SetupBrowser {
 
     public void start_browser(String browser) {
         if (browser.equals("remote")) {
-            Configuration.remote = "http://localhost:4444/";
+            Configuration.remote = "http://localhost:4444/wd/hub";
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setBrowserName("chrome");
             capabilities.setVersion("86.0");
