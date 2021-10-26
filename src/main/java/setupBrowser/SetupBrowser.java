@@ -20,9 +20,7 @@ public class  SetupBrowser {
             Configuration.headless = false;
             SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true).
                     includeSelenideSteps(false));
-        }
-        if (browser.equals("Chrome")) {
-            Configuration.browser = browser;
+
         } else {
             Configuration.browser = "chrome";
             Configuration.timeout = 5000;
