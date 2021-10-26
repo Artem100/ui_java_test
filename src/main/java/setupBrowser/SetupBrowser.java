@@ -18,7 +18,7 @@ public class  SetupBrowser {
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setBrowserName("chrome");
             capabilities.setVersion("86.0");
-            Configuration.timeout = 5000;
+            Configuration.timeout = 30000;
             Configuration.clickViaJs = true;
             Configuration.startMaximized = true;
 //            Configuration.headless = false;
