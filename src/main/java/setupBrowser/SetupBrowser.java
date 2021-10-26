@@ -17,7 +17,7 @@ public class  SetupBrowser {
             Configuration.remote = "http://localhost:4444/wd/hub";
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setBrowserName("chrome");
-            capabilities.setVersion("86.0");
+            capabilities.setVersion("95.0");
             Configuration.timeout = 30000;
             Configuration.clickViaJs = true;
             Configuration.startMaximized = true;
@@ -26,14 +26,15 @@ public class  SetupBrowser {
             SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true).
                     includeSelenideSteps(false));
 
-        } else {
-            Configuration.browser = "chrome";
-            Configuration.timeout = 5000;
-            Configuration.browserSize = "1920x1080";
-            Configuration.headless = false;
-            SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true).
-                    includeSelenideSteps(false));
         }
+//        else {
+//            Configuration.browser = "chrome";
+//            Configuration.timeout = 5000;
+//            Configuration.browserSize = "1920x1080";
+//            Configuration.headless = false;
+//            SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true).
+//                    includeSelenideSteps(false));
+//        }
     }
 
 }
