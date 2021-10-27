@@ -27,14 +27,14 @@ public class  SetupBrowser {
                     includeSelenideSteps(false));
 
         }
-//        else {
-//            Configuration.browser = "chrome";
-//            Configuration.timeout = 5000;
-//            Configuration.browserSize = "1920x1080";
-//            Configuration.headless = false;
-//            SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true).
-//                    includeSelenideSteps(false));
-//        }
+        else if (browser.equals("local")){
+            Configuration.browser = "chrome";
+            Configuration.timeout = 5000;
+            Configuration.browserSize = "1920x1080";
+            Configuration.headless = false;
+            SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true).
+                    includeSelenideSteps(false));
+        }
     }
 
 }

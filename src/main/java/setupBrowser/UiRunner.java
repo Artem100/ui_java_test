@@ -10,7 +10,7 @@ public class UiRunner {
 
     @Parameters({"browser"})
     @BeforeClass(alwaysRun = true)
-    public void SetUp(@Optional("remote")String browser){
+    public void SetUp(@Optional("local")String browser){
         SetupBrowser setupBrowser = new SetupBrowser();
         setupBrowser.start_browser(browser);
     }
